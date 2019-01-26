@@ -151,7 +151,7 @@ export const getOperatorClicked = (isClicked, prevValue, currentValue, action, o
     return prevValue + action.payload
 }
 
-// проверка кол-ва операторов, если больше 1 и он не равен нажатому, то выполняет мат. операцию и добавляет к итогу оператор
+
 export const getIsClicked = (currentValue, operator, action) => {
     return (
         compareIndexOfOperator(operator, currentValue) &&
