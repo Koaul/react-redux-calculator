@@ -19,14 +19,12 @@ const getValueAfterOperator = (currentValue, operator) => {
 const replaceOperator = (prevValue, currentValue, operator) => {
     let valueTwo
     valueTwo = getValueAfterOperator(currentValue, operator)
-    // при наличии отриц. числа, возвращает значение с ним
     if (currentValue.indexOf('-') === 0) {
         if (valueTwo === '') {
             return '-' + prevValue + (operator === '+' ? '-' : '+')
         }
         return '-' + prevValue + (operator === '+' ? '-' : '+') + valueTwo
     }
-    // если нет, без него
     if (valueTwo === '') {
         return prevValue + (operator === '+' ? '-' : '+')
     }
